@@ -7,25 +7,32 @@ import NavBar from './components/NavBar'
 import Home from './components/Home'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
+import View from './components/View'
+
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-    
-    <BrowserRouter>
 
+      <BrowserRouter>
+
+
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/view" element={<View />} />
+
+
+
+
+        </Routes>
+
+      </BrowserRouter>
       
 
-      <Routes>
-        <Route path="/" element={<Home/>} />
-        
-        
-      </Routes>
 
-    </BrowserRouter>
-    
-    
+
     </>
   )
 }
